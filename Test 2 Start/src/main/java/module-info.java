@@ -5,6 +5,6 @@ module com.georgiancollege.test2 {
 
 
     opens com.georgiancollege.test2 to javafx.fxml;
-//    opens com.google.gson.annotations to tmc.junit.runner;
+    opens com.google.gson.annotations to tmc.junit.runner;
     exports com.georgiancollege.test2;
 }
