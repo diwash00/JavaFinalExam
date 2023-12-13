@@ -18,7 +18,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        String filePath = "users.json";
+        String filePath = "users.json";//eta tmro file path hai json file ko
         User[] users = JsonParse.jsonFileParser(filePath);     //get an array of User object
 
         launch();
