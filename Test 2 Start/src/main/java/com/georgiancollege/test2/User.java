@@ -1,75 +1,95 @@
+package com.georgiancollege.test2;
+
 import com.google.gson.annotations.SerializedName;
+import javafx.beans.property.*;
 
 public class User {
     @SerializedName("id")
-    private int id;
+    private final IntegerProperty id = new SimpleIntegerProperty();
 
     @SerializedName("FirstName")
-    private String firstName;
+    private final StringProperty firstName = new SimpleStringProperty();
 
     @SerializedName("LastName")
-    private String lastName;
+    private final StringProperty lastName = new SimpleStringProperty();
 
     @SerializedName("age")
-    private int age;
+    private final IntegerProperty age = new SimpleIntegerProperty();
 
     @SerializedName("email")
-    private String email;
+    private final StringProperty email = new SimpleStringProperty();
 
     @SerializedName("phone")
-    private String phone;
+    private final StringProperty phone = new SimpleStringProperty();
 
     @SerializedName("birthDate")
-    private String birthDate;
+    private final StringProperty birthDate = new SimpleStringProperty();
 
     @SerializedName("uNiVersity")
-    private String university;
+    private final StringProperty university = new SimpleStringProperty();
 
     @SerializedName("image")
-    private String image;
+    private final StringProperty image = new SimpleStringProperty();
 
     @SerializedName("address")
-    private Address address;
+    private final ObjectProperty<Address> address = new SimpleObjectProperty<>();
 
-    // Get methods for all instance variables
-
-    public int getId() {
+    // Getters for JavaFX properties
+    public IntegerProperty idProperty() {
         return id;
     }
 
-    public String getFirstName() {
+    public StringProperty firstNameProperty() {
         return firstName;
     }
 
-    public String getLastName() {
+    public StringProperty lastNameProperty() {
         return lastName;
     }
 
-    public int getAge() {
+    public IntegerProperty ageProperty() {
         return age;
     }
 
-    public String getEmail() {
+    public StringProperty emailProperty() {
         return email;
     }
 
-    public String getPhone() {
+    public StringProperty phoneProperty() {
         return phone;
     }
 
-    public String getBirthDate() {
+    public StringProperty birthDateProperty() {
         return birthDate;
     }
 
-    public String getUniversity() {
+    public StringProperty universityProperty() {
         return university;
     }
 
-    public String getImage() {
+    public StringProperty imageProperty() {
         return image;
     }
 
-    public Address getAddress() {
+    public ObjectProperty<Address> addressProperty() {
         return address;
+    }
+
+    // Other methods remain unchanged
+    public int getId() {
+        return id.get();
+    }
+
+    public void setId(int id) {
+        this.id.set(id);
+    }
+
+    public String getImage() {
+        return image.get();
+    }
+
+
+    public int getAge() {
+        return age.get();
     }
 }
